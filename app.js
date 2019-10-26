@@ -15,13 +15,15 @@ function draw() {
     line(0,40,640,40);
 }
 
+var age = 42;
+var heightInInches = 69;
+var weight = 190;
 //Declare a function
 function day1AM() {
     // console.log("Hello world");
     var firstName = "Dusty";
     var lastName = "Juhl";
-    var age = 42;
-    var heightInInches = 69;
+    var weight = 190;
     var address = "1600 NW Ridge Rd";
     var city = "Ankeny";
     var state = "IA";
@@ -48,20 +50,39 @@ function day1AM() {
     console.log(feet);
     var inches = heightInInches % 12;
     console.log(fullName + " is " + feet + " feet " + inches + " inches tall.");
+}
+
+function day1PM() {
     print("Hello World");
     var convertedTemp = f2c(212);
     print(convertedTemp);
+    // var heightSquared = Math.pow(heightInInches,2);
+    // var bmi = bmiConverter(185);
+    // print(bmi);
+    print(canIGoToTheCasino(age,"IA"));
+    age = 19;
+    print(canIGoToTheCasino(age,"IA"));
+    print(canIGoToTheCasino(age,"MN"));
 }
-
-//Call a function
+ //Call a function
 day1AM();
-
+day1PM();   
+    
 function print(input) {
     console.log(input);
 }
-
+    
 //Convert Fahrenheit to Celsius
 //Input: temperature in Fahrenheit
 function f2c(tempF) {
     return((tempF - 32) * 5 / 9);
 }
+    
+// function bmiConverter() {
+//     return(703 * weight / heightSquared);
+// }
+
+function canIGoToTheCasino (age,location) {
+    return age >= 21 && location == "IA" || age >= 18 && location == "MN";
+}
+
