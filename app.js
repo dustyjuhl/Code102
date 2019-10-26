@@ -14,3 +14,21 @@ function draw() {
     strokeWeight(2);
     line(0,40,640,40);
 }
+
+//Declare a function
+function day1AM() {
+    console.log("Hello world");
+    var firstName = "Dusty";
+    var lastName = "Juhl";
+    var age = 42;
+    var address = "1600 NW Ridge Rd";
+    var city = "Ankeny";
+    var state = "IA";
+    var zipCode = "50023";
+    console.log (typeof(hasTattoos));
+    var likesPizza = true;
+    var hasTattoos = false;
+}
+
+//Call a function
+day1AM();
