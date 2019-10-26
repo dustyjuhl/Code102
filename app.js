@@ -63,6 +63,8 @@ function day1PM() {
     age = 19;
     print(canIGoToTheCasino(age,"IA"));
     print(canIGoToTheCasino(age,"MN"));
+    print(uniformOfTheDay(90));
+    print(uniformOfTheDay(60));
 }
  //Call a function
 day1AM();
@@ -86,3 +88,17 @@ function canIGoToTheCasino (age,location) {
     return age >= 21 && location == "IA" || age >= 18 && location == "MN";
 }
 
+// function canISleepIn(day, personalDay, holiday) {
+//     //Assume a normal M-F 8am - 5pm job
+//     //return true if the day is Saturday or Sunday
+//     //or vacation or holiday
+// }
+
+function uniformOfTheDay(temp) {
+    if(temp >= 75) {
+        return "shorts and sandals";
+    }
+    else {
+        return "jeans and jacket";
+    }
+}
