@@ -26,9 +26,10 @@ function day1AM() {
     var city = "Ankeny";
     var state = "IA";
     var zipCode = "50023";
-    // console.log(typeof(hasTattoos));
     var likesPizza = true;
+    // console.log(typeof(likesPizza));
     var hasTattoos = false;
+    // console.log(typeof(hasTattoos));
     console.log(age);
     age = age + 1;
     console.log(age);
@@ -46,8 +47,21 @@ function day1AM() {
     var feet = Math.floor(heightInInches / 12);
     console.log(feet);
     var inches = heightInInches % 12;
-    console.log(fullName + " is " + feet + " feet " + inches + " inches tall.")
+    console.log(fullName + " is " + feet + " feet " + inches + " inches tall.");
+    print("Hello World");
+    var convertedTemp = f2c(212);
+    print(convertedTemp);
 }
 
 //Call a function
 day1AM();
+
+function print(input) {
+    console.log(input);
+}
+
+//Convert Fahrenheit to Celsius
+//Input: temperature in Fahrenheit
+function f2c(tempF) {
+    return((tempF - 32) * 5 / 9);
+}
