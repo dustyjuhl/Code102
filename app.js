@@ -114,18 +114,37 @@ function day2AM() {
         count--;
     }
 
-    var sum = 0;
-    count = 0;
-    while(true) {
-        var input = parseInt(prompt('Enter a number. Type 0 to end.'));
-        if(input === 0) {
-            break;
-        } else {
-            sum += input;
-            count++;
-        }    
+    // var sum = 0;
+    // count = 0;
+    // while(true) {
+    //     var input = parseInt(prompt('Enter a number. Type 0 to end.'));
+    //     if(input === 0) {
+    //         break;
+    //     } else {
+    //         sum += input;
+    //         count++;
+    //     }    
+    // }
+    // console.log('The average of your numbers is ' + sum/count);
+
+    for(var count = 1; count <= 100; count++) {
+        print(count);
     }
-    console.log('The average of your numbers is ' + sum/count);
+
+    var months = ['January','February','March','April','May'];
+    print(months[0]);
+    print(months[1]);
+    for(var i = 0; i < months.length; i++) {
+        print(months[i]);
+    }
+
+    months.forEach(function(month) {
+        print(month);
+    })
+    var states = ['Alabama','Alaska','American Samoa','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Federated States of Micronesia','Florida','Georgia','Guam','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Marshall Islands','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Northern Mariana Islands','Ohio','Oklahoma','Oregon','Palau','Pennsylvania','Puerto Rico','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virgin Island','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
+    states.forEach(function(state) {
+        print(state);
+    })
 }
 
 day2AM();
