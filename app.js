@@ -67,8 +67,8 @@ function day1PM() {
     print(uniformOfTheDay(60));
 }
  //Call a function
-day1AM();
-day1PM();   
+//day1AM();
+//day1PM();   
     
 function print(input) {
     console.log(input);
@@ -102,3 +102,30 @@ function uniformOfTheDay(temp) {
         return "jeans and jacket";
     }
 }
+
+function day2AM() {
+    console.log(1);
+    print(2);
+    print(3);
+
+    var count = 10;
+    while(count >= 0) {
+        print(count);
+        count--;
+    }
+
+    var sum = 0;
+    count = 0;
+    while(true) {
+        var input = parseInt(prompt('Enter a number. Type 0 to end.'));
+        if(input === 0) {
+            break;
+        } else {
+            sum += input;
+            count++;
+        }    
+    }
+    console.log('The average of your numbers is ' + sum/count);
+}
+
+day2AM();
