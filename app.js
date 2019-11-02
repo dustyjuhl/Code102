@@ -147,4 +147,37 @@ function day2AM() {
     })
 }
 
-day2AM();
+// day2AM();
+function day2PM() {
+    var dusty = {
+        firstName: "Dusty",
+        middleName: "Wyatt",
+        lastName: "Juhl",
+        dob: [1,3,1977], //month, day, year
+        likesPizza: true,
+        heightInInches: 69,
+        fullName: function() {
+            return this.firstName + ' ' + this.middleName + ' ' + this.lastName;
+        },
+        age: function() {
+            var today = new Date();
+            var year = today.getFullYear();
+            //getMonth will result in 0 for January, 1 for February, etc.
+            var month = today.getMonth() + 1;
+            var day = today.getDate();
+            //The birth year is at index position 2 of the dob array
+            var myAge = year - this.dob[2];
+            if (month < this.dob[0] || month === this.dob[0] && day < this.dob[1]) {
+                //Subtract one from the age if you haven't had your birthday this year.
+                myAge--;
+            };
+            return (myAge);
+
+        },
+    };
+
+    print(dusty.fullName());
+    print(dusty.age());
+}
+
+day2PM();
